@@ -13,16 +13,39 @@ function adicionarValor() {
     document.getElementById('valor').focus();
 }
 
-function mostrarPares() {
-  const tabela = document.getElementById("tabelaPares").getElementsByTagName("tbody")[0];
+function primeNumbers() {
+  const tabela = document.getElementById("primeNumbers").getElementsByTagName("tbody")[0];
 
 
-  for (let i = 0; i < vetor.length; i++) {
-    const valor = vetor[i];
+  tabelaPares.innerHTML = ''; // Limpa a tabela antes de adicionar novos valores
+
+  vetor.forEach(valor => {
     if (valor % 2 === 0) {
-      const linha = tabela.insertRow();
-      const celula = linha.insertCell();
+      const novaLinha = primeNumbers.insertRow();
+      const celula = novaLinha.insertCell(0);
       celula.textContent = valor;
     }
-  }
+  });
 }
+
+/* Estilos do formulário */
+
+
+function primeNumbers(num) {
+
+  let numbers = new Array();
+  for (var i = 0; i <= num; i++) {
+    if (isPrime(i)){
+      numbers.push(i);
+    }
+  }
+  return numbers;
+}
+function isPrime(num) {
+  for(let i = 2; i <num; i++)
+    if(num % i === 0) {
+        return false
+    };
+  return num > 1;
+}
+console.log(primeNumbers( 2,3,5,7,11 ));
