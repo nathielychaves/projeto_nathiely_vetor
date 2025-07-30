@@ -1,37 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Formulário</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
+  <title>Avaliação Escolar</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Link para o CSS -->
 </head>
 <body>
-  <h1>Trabalhando com Vetores</h1>
-  <form id="formulario">
-    <label for="valor">Digite um valor de cada vez:</label>
-    <input type="text" id="valor"><br>
-    <button type="button" id="add-btn" onclick="adicionarValor()">Adicionar Valor</button>
-    <table id="tabelaValores">
+
+  <div class="container">
+    <h2>Avaliação de Estudantes</h2>
+    <table>
       <thead>
         <tr>
-          <th>Valores</th>
+          <th>Nome</th>
+          <th>Matemática</th>
+          <th>Português</th>
+          <th>Ciências</th>
+          <th>Média</th>
         </tr>
       </thead>
       <tbody>
-      </tbody>
-    </table>
-    <button type="button" id="par-btn" onclick="primeNumbers()">Mostrar números pares</button>
-    <table id="TabelaPares">
-      <thead>
         <tr>
-          <th>Números Pares</th>
+          <td>João Silva</td>
+          <td>7.5</td>
+          <td>8.0</td>
+          <td>6.5</td>
+          <td>7.33</td>
         </tr>
-      </thead>
-      <tbody>
+        <tr>
+          <td>Maria Oliveira</td>
+          <td>9.0</td>
+          <td>7.5</td>
+          <td>8.5</td>
+          <td>8.33</td>
+        </tr>
+        <tr>
+          <td>Carlos Pereira</td>
+          <td>6.0</td>
+          <td>7.0</td>
+          <td>7.5</td>
+          <td>6.83</td>
+        </tr>
+        <tr>
+          <td>Ana Costa</td>
+          <td>8.0</td>
+          <td>9.5</td>
+          <td>9.0</td>
+          <td>8.83</td>
+        </tr>
       </tbody>
     </table>
-  </form>
-  <script src="js/script.js"></script>
+  </div>
+
 </body>
 </html>
